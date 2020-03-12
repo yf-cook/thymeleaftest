@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--该head是为了引入一些样式-->
+<head th:replace="header::head-fragment"></head>
+<body id="blog">
+<!--该nav是导入了主业的导航条~~<header.html>~~~<nav th:fragment="nav-fragment" >-->
+<div th:replace="header::nav-fragment"></div>
+<!--引入头部的样式，如头部的图片---<head.html>--<header th:fragment="header-fragment"-->
+</body>
+<script th:src="@{/blog/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/blog/plugins/search/search.js}"></script>
+<!--引入的sweetalert的js文件，用于swal()提示框的使用-->
+<script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
+</html>
